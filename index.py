@@ -26,7 +26,6 @@ CONTENT_STYLE = {
 }
 
 server = app.server
-
 app.layout = html.Div(
     [
         
