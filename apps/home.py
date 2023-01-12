@@ -111,7 +111,7 @@ def home_loadreports(pathname):
             inner join services s on t.service_id = s.service_id
             inner join pets p on t.pet_id = p.pet_id
             inner join owners o on p.owner_id = o.owner_id
-            where trans_status ='Not Paid'
+            where trans_status ='Not Paid' and trans_delete_ind = 'false'
         """
         values = []
         colnames = ['Customer Name', 'Contact Number', 'Service', 'Unpaid Amount']
