@@ -120,15 +120,15 @@ def home_loadreports(pathname):
     
         if topservices.shape:
             table1 = dbc.Table.from_dataframe(topservices, striped=True, bordered=True,
-            hover=True, size='sm')
+            hover=True, size='sm', style = {'textAlign': 'center'})
 
         if topdoctor.shape:
             table2 = dbc.Table.from_dataframe(topdoctor, striped=True, bordered=True,
-            hover=True, size='sm')
+            hover=True, size='sm', style = {'textAlign': 'center'})
 
         if unpaid.shape:
             table3 = dbc.Table.from_dataframe(unpaid, striped=True, bordered=True,
-            hover=True, size='sm')
+            hover=True, size='sm', style = {'textAlign': 'center'})
             
             return [table1, table2, table3]
         else:
