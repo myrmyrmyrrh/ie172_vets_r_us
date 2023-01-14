@@ -17,6 +17,7 @@ layout = html.Div(
         dcc.Graph(
             id='sales_graph',
         ),
+
     ]
 )
 
@@ -41,7 +42,7 @@ def home_loadreports(pathname):
 
         sales = db.querydatafromdatabase(sql,values,colnames)
 
-        sales_figure = px.bar(sales, x="Month", y="Transactions", color="Month", barmode="group")
+        sales_figure = px.bar(sales, x="Month", y="Transactions", color="Month", barmode="group",color_discrete_sequence=["#900C3F", "#900C3F", "#900C3F", "#900C3F", "#900C3F", "#900C3F", "#900C3F", "#900C3F", "#900C3F", "#900C3F","#900C3F", "#900C3F"] )
 
         return [sales_figure]
 
